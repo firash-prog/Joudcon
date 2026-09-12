@@ -1,0 +1,27 @@
+import ResourceManager, { Field } from '@/components/admin/ResourceManager';
+const fields: Field[] = [
+  { key: 'name', label: 'Project name', type: 'langtext', required: true },
+  { key: 'slug', label: 'Slug', type: 'text', hint: 'auto from name if blank' },
+  { key: 'client', label: 'Client', type: 'text', required: true },
+  { key: 'category', label: 'Category', type: 'select', options: ['Corporate', 'Conference', 'Exhibition', 'Award Ceremony', 'Cultural'] },
+  { key: 'event_type', label: 'Event type', type: 'text' },
+  { key: 'location', label: 'Location', type: 'langtext' },
+  { key: 'year', label: 'Year', type: 'number' },
+  { key: 'summary', label: 'Short summary', type: 'langtext' },
+  { key: 'description', label: 'Full description', type: 'langtext' },
+  { key: 'objective', label: 'Client objective', type: 'langtext' },
+  { key: 'scope', label: 'Scope', type: 'langtext' },
+  { key: 'creative_approach', label: 'Creative approach', type: 'langtext' },
+  { key: 'production', label: 'Production', type: 'langtext' },
+  { key: 'fabrication', label: 'Fabrication', type: 'langtext' },
+  { key: 'logistics', label: 'Logistics', type: 'langtext' },
+  { key: 'installation', label: 'Installation', type: 'langtext' },
+  { key: 'outcome', label: 'Outcome', type: 'langtext' },
+  { key: 'featured_image', label: 'Featured image', type: 'media' },
+  { key: 'video_path', label: 'Video path (storage)', type: 'text' },
+  { key: 'video_poster', label: 'Video poster', type: 'media' },
+  { key: 'is_featured', label: 'Featured on homepage', type: 'bool' },
+  { key: 'gallery', label: 'Project gallery', type: 'gallery' },
+  { key: 'status', label: 'Status', type: 'select', options: ['draft', 'published', 'archived'] },
+];
+export default function ProjectsAdmin() { return <ResourceManager table="projects" title="Projects" fields={fields} />; }

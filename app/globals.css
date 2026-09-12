@@ -1,0 +1,30 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+
+:root{ --amber:#F9AE40; --slate:#AEACBF; --ink:#22212B; --paper:#FAFAFC; --line:#E4E3EA; }
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Segoe UI',system-ui,Arial,sans-serif;line-height:1.6}
+.trk{text-transform:uppercase;letter-spacing:.14em}
+.kicker{color:var(--amber);font-size:13px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:18px}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:700;font-size:13px;
+  text-transform:uppercase;letter-spacing:.14em;transition:.25s;cursor:pointer;text-decoration:none}
+.btn-amber{background:var(--amber);color:var(--ink)}
+.btn-amber:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(249,174,64,.4)}
+.btn-ghost{border:1.5px solid var(--slate);color:inherit;background:transparent}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+.btn:active{transform:scale(.98)}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  transition:.35s cubic-bezier(.2,.7,.3,1)}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(34,33,43,.14)}
+.field label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#6E6C7B;margin-bottom:7px}
+.field input,.field textarea,.field select{width:100%;padding:13px 15px;border:1.5px solid var(--line);
+  border-radius:10px;font:inherit;background:#fff}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--amber);
+  box-shadow:0 0 0 3px rgba(249,174,64,.18)}
+.navlink{position:relative;text-decoration:none;font-size:13px;text-transform:uppercase;letter-spacing:.14em}
+.navlink::after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:2px;background:var(--amber);border-radius:2px;transition:right .3s}
+.navlink:hover::after,.navlink.active::after{right:0}
+.navlink.active{color:var(--amber)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+[dir="rtl"] .trk{letter-spacing:.02em}
+[dir="rtl"] .kicker{letter-spacing:.12em}
